@@ -1,0 +1,26 @@
+<!-- src/main/resources/templates/coupons.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupons</title>
+</head>
+<body>
+    <h1>Coupons</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Discount Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="coupon : ${coupons}">
+                <td th:text="${coupon.key}"></td>
+                <td th:text="${coupon.value}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
